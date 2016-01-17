@@ -3,7 +3,7 @@ NOTES
 These are added by me for my own work and todo.
 
 Todo:
-* Check how minus temperatures work
+* Check how minus temperatures work (done)
 * Create code for secondary temperature sensor
 * See and plan for better UI
 * DB for more sensors and using these in the UI
