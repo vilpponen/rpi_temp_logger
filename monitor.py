@@ -5,6 +5,7 @@ import sqlite3
 import os
 import time
 import glob
+import re
 
 # global variables
 speriod=(15*60)-1
@@ -56,7 +57,8 @@ def get_temp(devicefile):
     # is the status is ok, get the temperature from line 2
     if status=="YES":
         print status
-        tempstr= lines[1][-6:-1]
+        m = re.match('.*t=(-?[0-9\.]+)', lines[1])
+        tempstr= m.group(1)
         tempvalue=float(tempstr)/1000
         print tempvalue
         return tempvalue
